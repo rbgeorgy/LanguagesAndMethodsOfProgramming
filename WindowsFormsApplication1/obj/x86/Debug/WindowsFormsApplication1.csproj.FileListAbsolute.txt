@@ -1,0 +1,63 @@
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+c:\documents and settings\x\my documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\admin\Рабочий стол\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Program Files\Microsoft Visual Studio 10.0\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\admin\Мои документы\Загрузки\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\x\My Documents\Downloads\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplicationNewBorn\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
