@@ -282,70 +282,175 @@ namespace WindowsFormsApplication1
         {
             Equation newEquation = new Equation(_coefArray);
             double[] arr = newEquation.Evaluate(int.Parse(CbState.Text));
-            if (int.Parse(CbState.Text) == 2 && arr[2] == 1)
-            {
-                RootOutput.Text += "\n";
-                RootOutput.Text += "X1 = " + arr[0].ToString() + " + i*" + arr[1].ToString();
-                RootOutput.Text += "\n";
-                RootOutput.Text += "X2 = " + arr[0].ToString() + " - i*" + arr[1].ToString();
-                RootCheck.Text = "Can't check complex roots!";
-            }
-            else if (int.Parse(CbState.Text) == 3 && arr[3] == 0)//WP
-            {
-                RootOutput.Text += "\n";
-                RootOutput.Text += "X1 = " + arr[0] + "\n";
 
-                RootCheck.Text += "\n" + "F(x1) = " + F3(arr[0]).ToString() + "\n";
-
-                RootOutput.Text += "X2 = " + arr[1].ToString() + " + i*" + arr[2].ToString() + "\n";
-                RootOutput.Text += "X2 = " + arr[1].ToString() + " - i*" + arr[2].ToString() + "\n";
-
-                RootCheck.Text += "Can't check complex roots!";
-
-            }
-            else if (int.Parse(CbState.Text) == 3 && arr[3] == 1) //WP
+            if (int.Parse(CbState.Text) == 4 && _coefArray[4] != 0)
             {
-                RootOutput.Text += "\n";
-                RootOutput.Text += "X1 = " + arr[0].ToString();
-                RootCheck.Text += "\n" + "F(x1) = " + F3(arr[0]).ToString() + "\n";
-                RootOutput.Text += "X2 = " + arr[1].ToString();
-                RootCheck.Text += "\n" + "F(x2) = " + F3(arr[1]).ToString() + "\n";
-                RootOutput.Text += "X3 = " + arr[1].ToString();
-                RootCheck.Text += "\n" + "F(x3) = " + F3(arr[1]).ToString() + "\n";
-            }
-            else if (int.Parse(CbState.Text) == 3 && arr[3] == 2) //WP
-            {
-                RootOutput.Text += "\n";
-                RootOutput.Text += "X1 =" + arr[0].ToString() + "\n";
-                RootCheck.Text += "\n" + "F(x1) = " + F3(arr[0]).ToString() + "\n";
-                RootOutput.Text += "X2 =" + arr[1].ToString() + "\n";
-                RootCheck.Text += "\n" + "F(x1) = " + F3(arr[1]).ToString() + "\n";
-                RootOutput.Text += "X3 =" + arr[2].ToString() + "\n";
-                RootCheck.Text += "\n" + "F(x1) = " + F3(arr[2]).ToString() + "\n";
-
-            }
-            else if (int.Parse(CbState.Text) == 2)
-            {
-                for (int i = 0; i < int.Parse(CbState.Text); i++)
+                
+                string[] fourArr = newEquation.EvaluateFour();
+                if (fourArr[4] == "0")
                 {
-                    RootOutput.Text += "X" + (i + 1).ToString() + " = " + arr[i].ToString() + "\n";
-                    RootCheck.Text += "\n" + "F(x" + (i + 1).ToString() + ") = " + F2(arr[i]).ToString() + "\n";
+                    fourDegreePrintTwoReal(fourArr);
                 }
-            }
-            else if (int.Parse(CbState.Text) == 1)
-            {
-                RootOutput.Text += "X" + (1).ToString() + " = " + arr[0].ToString() + "\n";
-                RootCheck.Text += "\n" + "F(x" + (1).ToString() + ") = " + F1(arr[0]).ToString() + "\n";
+                else if (fourArr[4] == "1")
+                {
+                    fourDegreePrintFourReal(fourArr);
+                }
+                else if (fourArr[4] == "2")
+                {
+                    fourDegreePrintZeroReal(fourArr);
 
+                }
             }
             else
             {
-                if (int.Parse(CbState.Text) <= 3)
+
+                if (int.Parse(CbState.Text) == 4) CbState.Text = "3";
+
+                if (int.Parse(CbState.Text) == 3 && _coefArray[3] != 0)
                 {
-                    RootOutput.Text += "X" + (1).ToString() + " = " + arr[0].ToString() + "\n";
-                    RootCheck.Text += "\n" + "F(x" + (1).ToString() + ") = " + F1(arr[0]).ToString() + "\n";
+
+                    if (int.Parse(CbState.Text) == 3 && arr[3] == 0)//WP
+                    {
+                        threeDegreePrintTwoComplex(arr);
+
+                    }
+                    else if (int.Parse(CbState.Text) == 3 && arr[3] == 1) //WP
+                    {
+                        threeDegreePrintThreeRealComplex(arr);
+                    }
+                    else if (int.Parse(CbState.Text) == 3 && arr[3] == 2) //WP
+                    {
+                        threeDegreePrintThreeRealComplexTheSameLol(arr);
+
+                    }
                 }
-            }        
+                else
+                {
+                    if (int.Parse(CbState.Text) == 3) CbState.Text = "2";
+
+                    newEquation = new Equation(_coefArray);
+                    arr = newEquation.Evaluate(int.Parse(CbState.Text));
+
+                    if (int.Parse(CbState.Text) == 2 && _coefArray[2] != 0)
+                    {
+
+                        if (int.Parse(CbState.Text) == 2 && arr[2] == 1)
+                        {
+                            twoDegreePrintTwoComplex(arr);
+                        }
+                        else if (int.Parse(CbState.Text) == 2)
+                        {
+                            twoDegreePrintTwoReal(arr);
+                        }
+                    }
+                    else
+                    {
+                        CbState.Text = "1";
+
+                        newEquation = new Equation(_coefArray);
+                        arr = newEquation.Evaluate(int.Parse(CbState.Text));
+
+                        oneDegreePrint(arr);
+                    }
+                    
+                }
+            }
+        }
+
+        private void oneDegreePrint(double[] arr)
+        {
+            RootOutput.Text += "X" + (1).ToString() + " = " + arr[0].ToString() + "\n";
+            RootCheck.Text += "\n" + "F(x" + (1).ToString() + ") = " + F1(arr[0]).ToString() + "\n";
+        }
+
+        private void twoDegreePrintTwoReal(double[] arr)
+        {
+            for (int i = 0; i < int.Parse(CbState.Text); i++)
+            {
+                RootOutput.Text += "X" + (i + 1).ToString() + " = " + arr[i].ToString() + "\n";
+                RootCheck.Text += "\n" + "F(x" + (i + 1).ToString() + ") = " + F2(arr[i]).ToString() + "\n";
+            }
+        }
+
+        private void threeDegreePrintThreeRealComplexTheSameLol(double[] arr)
+        {
+            RootOutput.Text += "\n";
+            RootOutput.Text += "X1 =" + arr[0].ToString() + "\n";
+            RootCheck.Text += "\n" + "F(x1) = " + F3(arr[0]).ToString() + "\n";
+            RootOutput.Text += "X2 =" + arr[1].ToString() + "\n";
+            RootCheck.Text += "\n" + "F(x1) = " + F3(arr[1]).ToString() + "\n";
+            RootOutput.Text += "X3 =" + arr[2].ToString() + "\n";
+            RootCheck.Text += "\n" + "F(x1) = " + F3(arr[2]).ToString() + "\n";
+        }
+
+        private void threeDegreePrintThreeRealComplex(double[] arr)
+        {
+            RootOutput.Text += "\n";
+            RootOutput.Text += "X1 = " + arr[0].ToString();
+            RootCheck.Text += "\n" + "F(x1) = " + F3(arr[0]).ToString() + "\n";
+            RootOutput.Text += "X2 = " + arr[1].ToString();
+            RootCheck.Text += "\n" + "F(x2) = " + F3(arr[1]).ToString() + "\n";
+            RootOutput.Text += "X3 = " + arr[1].ToString();
+            RootCheck.Text += "\n" + "F(x3) = " + F3(arr[1]).ToString() + "\n";
+        }
+
+        private void threeDegreePrintTwoComplex(double[] arr)
+        {
+            RootOutput.Text += "\n";
+            RootOutput.Text += "X1 = " + arr[0] + "\n";
+
+            RootCheck.Text += "\n" + "F(x1) = " + F3(arr[0]).ToString() + "\n";
+
+            RootOutput.Text += "X2 = " + arr[1].ToString() + " + i*" + arr[2].ToString() + "\n";
+            RootOutput.Text += "X2 = " + arr[1].ToString() + " - i*" + arr[2].ToString() + "\n";
+
+            RootCheck.Text += "Can't check complex roots!";
+        }
+
+        private void twoDegreePrintTwoComplex(double[] arr)
+        {
+            RootOutput.Text += "\n";
+            RootOutput.Text += "X1 = " + arr[0].ToString() + " + i*" + arr[1].ToString();
+            RootOutput.Text += "\n";
+            RootOutput.Text += "X2 = " + arr[0].ToString() + " - i*" + arr[1].ToString();
+            RootCheck.Text += "\nCan't check complex roots!";
+        }
+
+        private void fourDegreePrintZeroReal(string[] fourArr)
+        {
+            RootOutput.Text += "\n";
+            RootOutput.Text += "I am sorry, this is only way";
+            RootOutput.Text += "\n";
+            RootOutput.Text += "Coz I had no time for using smth kinda TeXView";
+            RootOutput.Text += "X1 = " + fourArr[0] + "\n";
+            RootOutput.Text += "X2 = " + fourArr[1] + "\n";
+            RootOutput.Text += "X3 = " + fourArr[2] + "\n";
+            RootOutput.Text += "X4 = " + fourArr[3] + "\n";
+        }
+
+        private void fourDegreePrintFourReal(string[] fourArr)
+        {
+            RootOutput.Text += "\n";
+            RootOutput.Text += "X1 = " + fourArr[0] + "\n";
+            RootCheck.Text += "\n" + "F(x1) = " + F4(ParceInstrument(fourArr[0])).ToString() + "\n";
+            RootOutput.Text += "X2 = " + fourArr[1] + "\n";
+            RootCheck.Text += "\n" + "F(x2) = " + F4(ParceInstrument(fourArr[1])).ToString() + "\n";
+            RootOutput.Text += "X3 = " + fourArr[2] + "\n";
+            RootCheck.Text += "\n" + "F(x1) = " + F4(ParceInstrument(fourArr[2])).ToString() + "\n";
+            RootOutput.Text += "X4 = " + fourArr[3] + "\n";
+            RootCheck.Text += "\n" + "F(x2) = " + F4(ParceInstrument(fourArr[3])).ToString() + "\n";
+        }
+
+        private void fourDegreePrintTwoReal(string[] fourArr)
+        {
+            RootOutput.Text += "\n";
+            RootOutput.Text += "X1 = " + fourArr[0] + "\n";
+            RootCheck.Text += "\n" + "F(x1) = " + F4(ParceInstrument(fourArr[0])).ToString() + "\n";
+            RootOutput.Text += "X2 = " + fourArr[1] + "\n";
+            RootCheck.Text += "\n" + "F(x2) = " + F4(ParceInstrument(fourArr[1])).ToString() + "\n";
+            RootOutput.Text += "X3 = " + fourArr[2] + "\n";
+            RootOutput.Text += "X4 = " + fourArr[3] + "\n";
+            RootCheck.Text += "\nCan't check complex roots X3 and X4!";
         }
 
         private void evaluateButton_Click(object sender, EventArgs e)
@@ -366,62 +471,13 @@ namespace WindowsFormsApplication1
             
         }
 
-        private void test(int n) 
-        {
-            _coefArray = new double[n+1];
-            switch (n){                    
-                case 1:
-                    _coefArray[1] = 1;
-                    _coefArray[0] = 2;
-                    showGraph(1);
-                    break;
-                case 2:
-                    _coefArray[2] = 1;
-                    _coefArray[1] = 2;
-                    _coefArray[0] = 2;
-                    showGraph(2);
-                    break;
-                case 3:
-                    _coefArray[3] = 1;
-                    _coefArray[2] = 2;
-                    _coefArray[1] = 2;
-                    _coefArray[0] = 2;
-                    showGraph(3);
-                    break;
-                case 4:
-                    _coefArray[4] = 1;
-                    _coefArray[3] = 1;
-                    _coefArray[2] = 2;
-                    _coefArray[1] = 2;
-                    _coefArray[0] = 2;
-                    showGraph(4);
-                    break;
-                case 5:
-                    _coefArray[5] = 1;
-                    _coefArray[4] = 1;
-                    _coefArray[3] = 1;
-                    _coefArray[2] = 2;
-                    _coefArray[1] = 2;
-                    _coefArray[0] = 2;
-                    showGraph(5);
-                    break;
-            }
-        }
-
+        
 
         private void RootOutput_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void TestButton_Click(object sender, EventArgs e)
-        {
-            if (CbState.Text != "")
-            {
-                test(int.Parse(CbState.Text));
-            }
-            else test(5);
-        }
 
         private void clearSolution_Click(object sender, EventArgs e)
         {
@@ -465,6 +521,17 @@ namespace WindowsFormsApplication1
                         && ParceInstrument(f.Text) != Int32.MinValue
                         && ParceInstrument(d.Text) != Int32.MinValue
                         && ParceInstrument(c.Text) != Int32.MinValue
+                        )
+                    {
+                        return true;
+                    }
+                    break;
+                case 4:
+                    if (ParceInstrument(ee.Text) != Int32.MinValue
+                        && ParceInstrument(f.Text) != Int32.MinValue
+                        && ParceInstrument(d.Text) != Int32.MinValue
+                        && ParceInstrument(c.Text) != Int32.MinValue
+                        && ParceInstrument(b.Text) != Int32.MinValue
                         )
                     {
                         return true;

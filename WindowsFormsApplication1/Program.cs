@@ -185,6 +185,188 @@ namespace WindowsFormsApplication1
             return ans3;
         }
 
+        public static String[] solveFour(double a, double b, double c, double d, double e)
+        {
+            
+            double P = 8 * a * c - 3 * b * b;
+            double R = b * b * b + 8 * d * a * a - 4 * a * b * c;
+
+            double BigDelta = 256 * a * a * a * e * e * e - 192 * a * a * b * d * e * e - 128 * a * a * c * c * e * e + 144 * a * a * c * d * d * e - 27 * a * a * d * d * d * d + 144 * a * b * b * c * e * e - 6 * a * b * b * d * d * e - 80 * a * b * c * c * d * e + 18 * a * b * c * d * d * d + 16 * a * c * c * c * c * e - 4 * a * c * c * c * d * d - 27 * b * b * b * b * e * e + 18 * b * b * b * c * d * e - 4 * b * b * b * d * d * d - 4 * b * b * c * c * c * e + b * b * c * c * d * d;
+
+            double Delta = c * c - 3 * b * d + 12 * a * e;
+            double DeltaOne = 2 * c * c * c - 9 * b * c * d + 27 * b * b * e + 27 * a * d * d - 72 * a * c * e;
+            double D = 64 * a * a * a * e - 16 * a * a * c * c + 16 * a * b * b * c - 16 * a * a * b * d -
+                       3 * b * b * b * b;
+
+            double p = (8 * a * c - 3 * b * b) / (a * a * 8.0);
+            double q = (b * b * b - 4 * a * b * c + 8 * a * a * d) / (8.0 * a * a * a);
+
+            Console.WriteLine("BigDelta = " + BigDelta);
+
+            String[] ans4 = new String[5];//x1 x2 x3 x4 case : 
+                                                             // 0 -- two complex two real
+                                                            // 1 -- four real
+                                                           // 2 -- OMAGAD TRASH
+
+            if (BigDelta < 0)
+            {
+               return deltaLessThanZero(a, b, c, d, e, Delta, DeltaOne);
+            }
+
+            if (BigDelta > 0)
+            {
+                if (P < 0 && D < 0)
+                {
+                    double Phi = Math.Acos(DeltaOne / (2 * Math.Sqrt(Delta * Delta * Delta)));
+                    double S = 0.5 * Math.Sqrt((-2 / 3.0) * p + (2 / (3.0 * a)) * Math.Sqrt(Delta) * Math.Cos(Phi / 3.0));
+                    double underrootOne = -4 * S * S - 2 * p + q / S;
+                    double underrootTwo = -4 * S * S - 2 * p - q / S;
+                    double x1 = 0;
+                    double x2 = 0;
+                    double x3 = 0;
+                    double x4 = 0;
+                    x1 = -b / (4.0 * a) - S + 0.5 * Math.Sqrt(underrootOne);
+                    x2 = -b / (4.0 * a) - S - 0.5 * Math.Sqrt(underrootOne);
+                    x3 = -b / (4.0 * a) + S + 0.5 * Math.Sqrt(underrootTwo);
+                    x4 = -b / (4.0 * a) + S - 0.5 * Math.Sqrt(underrootTwo);
+                    Console.WriteLine("x1 = " + x1);
+                    Console.WriteLine("x2 = " + x2);
+                    Console.WriteLine("x3 = " + x3);
+                    Console.WriteLine("x4 = " + x4);
+
+                    ans4[0] = x1.ToString();
+                    ans4[1] = x2.ToString();
+                    ans4[2] = x3.ToString(); ;
+                    ans4[3] = x4.ToString();
+                    int whichCase = 1;
+                    ans4[4] = whichCase.ToString();
+                }                
+
+                if (P > 0 || D > 0)
+                {
+                    Console.WriteLine("4 комплексных корня, сложные отображения");
+                    double ImPartCube = getQim(Delta, DeltaOne);
+                    double realPartCube = DeltaOne / 2.0;
+
+                    String Q = "CubeRoot(" + realPartCube + " + i*" + ImPartCube + ")";
+                    String QPlusFracDeltaQ = Q + Delta + "/" + Q;
+
+                    double firstUndeRootS = (-2 / 3.0) * p;
+                    double secondUndeRootS = (1 / (3.0 * a));
+                    String S = 0.5 + "* SquareRoot(" + firstUndeRootS + " + " + secondUndeRootS + "*" + QPlusFracDeltaQ +
+                        ")";
+
+                    String x12 = -b / (4.0 * a) + "-S +- 0.5* SquareRoot(-4(" + S + ")^2 - " + 2 * p + " + " + q + "/" + S;
+                    String x34 = -b / (4.0 * a) + "+S +- 0.5* SquareRoot(-4(" + S + ")^2 - " + 2 * p + " - " + q + "/" + S;
+                    Console.WriteLine(x12);
+                    Console.WriteLine(x34);
+
+                    ans4[0] = -b / (4.0 * a) + "-S + 0.5* SquareRoot(-4(" + S + ")^2 - " + 2 * p + " + " + q + "/" + S;
+                    ans4[1] = -b / (4.0 * a) + "-S - 0.5* SquareRoot(-4(" + S + ")^2 - " + 2 * p + " + " + q + "/" + S;
+                    ans4[2] = -b / (4.0 * a) + "+S + 0.5* SquareRoot(-4(" + S + ")^2 - " + 2 * p + " - " + q + "/" + S;
+                    ans4[3] = -b / (4.0 * a) + "+S - 0.5* SquareRoot(-4(" + S + ")^2 - " + 2 * p + " - " + q + "/" + S;
+                    int whichCase = 2;
+                    ans4[4] = whichCase.ToString();
+                }
+            }
+
+            if (BigDelta == 0)
+            {
+                if (Delta == 0 && D != 0)
+                {
+                    double Phi = Math.Acos(DeltaOne / (2 * Math.Sqrt(Delta * Delta * Delta)));
+                    double S = 0.5 * Math.Sqrt((-2 / 3.0) * p + (2 / (3.0 * a)) * Math.Sqrt(Delta) * Math.Cos(Phi / 3.0));
+                    double underrootOne = -4 * S * S - 2 * p + q / S;
+                    double underrootTwo = -4 * S * S - 2 * p - q / S;
+                    double x1 = 0;
+                    double x2 = 0;
+                    double x3 = 0;
+                    double x4 = 0;
+                    x1 = -b / (4.0 * a) - S + 0.5 * Math.Sqrt(underrootOne);
+                    x2 = -b / (4.0 * a) - S - 0.5 * Math.Sqrt(underrootOne);
+                    x3 = -b / (4.0 * a) + S + 0.5 * Math.Sqrt(underrootTwo);
+                    x4 = -b / (4.0 * a) + S - 0.5 * Math.Sqrt(underrootTwo);
+                    Console.WriteLine("x1 = " + x1);
+                    Console.WriteLine("x2 = " + x2);
+                    Console.WriteLine("x3 = " + x3);
+                    Console.WriteLine("x4 = " + x4);
+                    ans4[0] = x1.ToString();
+                    ans4[1] = x2.ToString();
+                    ans4[2] = x3.ToString(); ;
+                    ans4[3] = x4.ToString();
+                    int whichCase = 1;
+                    ans4[4] = whichCase.ToString();
+
+                }
+                else
+                {
+                    return deltaLessThanZero(a, b, c, d, e, Delta, DeltaOne);
+                }
+            }
+            return ans4;
+        }
+
+        private static double getQ(double Delta, double DeltaOne)
+        {
+            return CubeRoot((DeltaOne + Math.Sqrt(DeltaOne * DeltaOne - 4 * Delta * Delta * Delta)) / 2.0);
+        }
+
+        private static double getQim(double Delta, double DeltaOne)
+        {
+            double minusUnderQ = -DeltaOne * DeltaOne + 4 * Delta * Delta * Delta;
+            double ImPartCube = Math.Sqrt(minusUnderQ) / 2.0;
+            //double RealPartCube = DeltaOne / 2.0;
+            return ImPartCube;
+        }
+
+        private static String[] deltaLessThanZero(double a, double b, double c, double d, double e, double Delta, double DeltaOne)
+        {
+            double p = (8 * a * c - 3 * b * b) / (a * a * 8.0);
+            double q = (b * b * b - 4 * a * b * c + 8 * a * a * d) / (8.0 * a * a * a);
+            double Q = getQ(Delta, DeltaOne);
+            double S = 0.5 * Math.Sqrt(-(2 / 3.0) * p + (1 / (3.0 * a)) * (Q + Delta / Q));
+
+            double underrootOne = -4 * S * S - 2 * p + q / S;
+            double underrootTwo = -4 * S * S - 2 * p - q / S;
+
+            double x1 = 0;
+            double x2 = 0;
+            double realPart = 0;
+            double imPart = 0;
+
+            if (underrootOne >= 0)
+            {
+                x1 = -b / (4.0 * a) - S + 0.5 * Math.Sqrt(underrootOne);
+                x2 = -b / (4.0 * a) - S - 0.5 * Math.Sqrt(underrootOne);
+                realPart = -b / (4.0 * a) + S; // + 0.5 * i*Math.Sqrt(-underrootTwo);
+                imPart = 0.5 * Math.Sqrt(-underrootTwo);// - 0.5 *i* Math.Sqrt(-underrootTwo);
+
+            }
+
+            else if (underrootTwo >= 0)
+            {
+                x1 = -b / (4.0 * a) - S + 0.5 * Math.Sqrt(underrootTwo);
+                x2 = -b / (4.0 * a) - S - 0.5 * Math.Sqrt(underrootTwo);
+                realPart = -b / (4.0 * a) + S; // + 0.5 * i*Math.Sqrt(-underrootTwo);
+                imPart = 0.5 * Math.Sqrt(-underrootOne);// - 0.5 *i* Math.Sqrt(-underrootTwo);
+            }
+
+            String[] res = new String[5];
+
+            res[0] = x1.ToString();
+            res[1] = x2.ToString();
+            res[2] = realPart + " + i*" + imPart;
+            res[3] = realPart + " - i*" + imPart;
+            int whichCase = 0;
+            res[4] = whichCase.ToString();
+
+            Console.WriteLine("x1 = " + x1);
+            Console.WriteLine("x2 = " + x2);
+            Console.WriteLine("x3 = " + realPart + " + i*" + imPart);
+            Console.WriteLine("x4 = " + realPart + " - i*" + imPart);
+            return res;
+
+        }
         public double[] Evaluate(int n)
         {
             switch (n)
@@ -194,11 +376,15 @@ namespace WindowsFormsApplication1
                 case 2:
                     return solveTwo(_coefArray[2], _coefArray[1], _coefArray[0]);
                 case 3:
-                    return solveThree(_coefArray[3], _coefArray[2], _coefArray[1], _coefArray[0]);
+                    return solveThree(_coefArray[3], _coefArray[2], _coefArray[1], _coefArray[0]);                
                 default:
                     double[] ansdef = new double[1];
                     return ansdef;
             }
+        }
+
+        public string[] EvaluateFour() {
+            return solveFour(_coefArray[4] ,_coefArray[3], _coefArray[2], _coefArray[1], _coefArray[0]);
         }
 
     }

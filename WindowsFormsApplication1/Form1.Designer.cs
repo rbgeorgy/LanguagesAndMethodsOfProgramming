@@ -75,7 +75,8 @@
             this.CbState.Items.AddRange(new object[] {
             "1",
             "2",
-            "3"});
+            "3",
+            "4"});
             this.CbState.Location = new System.Drawing.Point(285, 15);
             this.CbState.MaxDropDownItems = 4;
             this.CbState.Name = "CbState";
